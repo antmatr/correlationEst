@@ -1,0 +1,92 @@
+.ui-input-slider {
+    width: 100%;
+    user-select: none;
+    &__values {
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        
+        text-align: center;
+        font-size: 2rem;
+        &-item {
+            flex: 1 1 100%;
+            &:first-child {
+                text-align: left;
+            }
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+    &__bar {
+        position: relative;
+
+        height: 30px;
+        width: 100%;
+
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            
+            position: absolute;
+            top: 10px;
+            left: 0;
+            z-index: 1;
+
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+
+            background: #ccc;
+        }
+        &-handler {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+
+            width: 30px;
+            height: 30px;
+            border: 5px solid #ccc;
+            border-radius: 50%;
+
+            background: #fff;
+
+            pointer-events: none;
+
+            transform: translateX(-50%);
+        }
+        &-marks {
+            position: absolute;
+            top: 6px;
+            right: 0;
+            bottom: 10px;
+            left: 0;
+            z-index: 2;
+
+            pointer-events: none;
+            &-item {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+
+                width: 2px;
+                height: 100%;
+                border-radius: 2px;
+
+                background: #ccc;
+
+                transform: translateX(-50%);
+            }
+        }
+    }
+    &__hints {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 100%;
+        margin-top: 10px;
+    }
+}

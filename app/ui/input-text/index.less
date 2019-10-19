@@ -1,0 +1,44 @@
+.ui-input-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 9px 14px 6px 8px;
+    border: 1px solid @color-gray-light;
+
+    color: @color-gray-darkest;
+    font-size: inherit;
+    line-height: inherit;
+    text-decoration: none;
+
+    background: @color-gray-lightest;
+    
+    appearance: none;
+    resize: none;
+
+    transition-property: border-color, color;
+    transition-duration: @duration-fast;
+    transition-timing-function: ease-in-out;
+    &::placeholder {
+        color: @color-gray-light;
+
+        transition: opacity @duration-fast ease-in-out;
+    }
+    &:focus::placeholder {
+        opacity: 0;
+    }
+    &:focus {
+        border-color: @color-gray-darkest;
+    }
+    &._positive {
+        border-color: @color-accent-positive;
+
+        color: @color-accent-positive;
+    }
+    &._invalid {
+        border-color: @color-accent-negative;
+    }
+    &._transparent {
+        background: transparent;
+    }
+}

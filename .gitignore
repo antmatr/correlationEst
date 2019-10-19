@@ -1,0 +1,6 @@
+*.idea/
+*.pyc
+*env/
+*db.sqlite3
+
+node_modules/

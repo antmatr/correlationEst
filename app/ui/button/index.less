@@ -1,0 +1,32 @@
+.ui-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 164px;
+    height: 100%;
+    min-height: 40px;
+    padding: 5px 12px;
+    border-radius: 4px;
+
+    color: @color-gray-lightest;
+    font-size: inherit;
+    line-height: inherit;
+    text-align: center;
+    
+    background-color: @color-gray-darker;
+
+    appearance: none;
+
+    transition: background-color @duration-faster ease-in-out;
+
+    &:hover {
+        background-color: @color-accent-main;
+    }
+
+    &._disabled {
+        background-color: @color-gray-light;
+        
+        pointer-events: none;
+    }
+}

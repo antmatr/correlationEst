@@ -1,0 +1,43 @@
+@import './steps/index';
+@import './ui/index';
+@import './theme/common';
+@import './theme/global-styles';
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+[v-cloak] {
+    display: none !important;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.5;
+}
+
+body {
+    margin: 0;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 100%;
+
+    /* text-align: right; */
+    direction: rtl;
+    font-size: 1.4rem;
+}
+
+._ltr {
+    direction: ltr;
+}

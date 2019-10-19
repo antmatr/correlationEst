@@ -1,0 +1,49 @@
+@import './testX10/index';
+@import './welcome/index';
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    &__title {
+        padding: 20px;
+
+        font-size: 2rem;
+        text-align: center;
+    }
+    &__block {
+        max-width: 660px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+    &__review {
+        max-width: 660px;
+        width: 100%;
+        padding: 20px;
+        margin: 0 auto;
+    }
+    &__input {
+        width: 160px;
+        margin: 0 auto;
+    }
+    &__error {
+        width: 280px;
+        margin: 0 auto;
+
+        color: @color-accent-negative;
+    }
+    &__buttons {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+        &-item {
+            max-width: 280px;
+            margin: 10px;
+        }
+    }
+}
